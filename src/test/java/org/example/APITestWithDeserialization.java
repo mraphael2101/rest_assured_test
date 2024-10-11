@@ -15,7 +15,7 @@ import static org.junit.Assert.assertEquals;
 
 public class APITestWithDeserialization {
     @Test
-    public void RegistrationSuccessful() throws JsonProcessingException {
+    public void testGetPostsWithDeserialization() throws JsonProcessingException {
         RestAssured.baseURI ="https://jsonplaceholder.typicode.com/";
         RequestSpecification request = RestAssured.given();
         Response response = request.get("/posts");
