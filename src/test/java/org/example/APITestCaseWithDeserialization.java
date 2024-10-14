@@ -13,7 +13,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class APITestWithDeserialization {
+public class APITestCaseWithDeserialization {
     @Test
     public void testGetPostsWithDeserialization() throws JsonProcessingException {
         RestAssured.baseURI ="https://jsonplaceholder.typicode.com/";

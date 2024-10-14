@@ -20,7 +20,7 @@ import static junit.framework.Assert.assertEquals;
  * 2) If you complete this are there any improvements you can do to make the test more thorough
  * */
 
-public class APITest {
+public class APIBasicTestCase {
 
     @Test
     public void testGetPosts() {
