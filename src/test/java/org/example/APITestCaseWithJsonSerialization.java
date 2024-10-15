@@ -33,7 +33,6 @@ public class APITestCaseWithJsonSerialization {
                 .body(jsonBody)
                 .post("posts");  // Using the "posts" endpoint for creating posts
 
-        // Assert the successful response code (assuming success is 201)
         assertEquals(201, response.statusCode());
 
         System.out.println("Response: " + response.body().asString());

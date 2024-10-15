@@ -7,7 +7,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
-import org.example.pojos.MyPOJO;
+import org.example.pojos.MyResponse;
 import org.junit.Test;
 
 import java.util.List;
@@ -27,15 +27,15 @@ public class APITestCaseWithDeserialization {
             // Deserialize the Response body into a list of custom objects of type MyPOJO
             // ObjectMapper converts the response body (in string format) into a list of MyPOJO objects
             ObjectMapper objectMapper = new ObjectMapper();
-            List<MyPOJO> myPojoList = objectMapper.readValue(
+            List<MyResponse> myResponseList = objectMapper.readValue(
                     response.body().asString(),
-                    new TypeReference<List<MyPOJO>>() {}
+                    new TypeReference<List<MyResponse>>() {}
             );
 
-            int id = myPojoList.get(0).getId();
-            int userId = myPojoList.get(0).getUserId();
-            String title = myPojoList.get(0).getTitle();
-            String rBody = myPojoList.get(0).getBody();
+            int id = myResponseList.get(0).getId();
+            int userId = myResponseList.get(0).getUserId();
+            String title = myResponseList.get(0).getTitle();
+            String rBody = myResponseList.get(0).getBody();
 
             assertEquals(1, id);
             assertEquals(1, userId);

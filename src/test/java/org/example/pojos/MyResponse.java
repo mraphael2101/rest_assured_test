@@ -1,6 +1,6 @@
 package org.example.pojos;
 
-public class MyPOJO {
+public class MyResponse {
 
     private int userId;
     private int id;
