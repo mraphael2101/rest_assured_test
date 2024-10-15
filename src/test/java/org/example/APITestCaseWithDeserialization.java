@@ -7,6 +7,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
+import org.example.pojos.MyPOJO;
 import org.junit.Test;
 
 import java.util.List;

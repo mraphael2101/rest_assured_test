@@ -13,29 +13,29 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 
 public class APITestCaseWithJsonSerialization {
+
     @Test
-    public void testGetPostsWithDeserialization() throws JsonProcessingException {
+    public void testPostRequestWithSerialization() throws JsonProcessingException {
+        // Create a Map representing the data for a new post
         Map<String, Object> data = new HashMap<>();
-        data.put("name", "Mark R");
-        data.put("age", 35);
+        data.put("title", "New Post Title");
+        data.put("body", "This is some post content");
+        data.put("userId", 1);
 
         // Serialize the data to JSON using Jackson ObjectMapper
         ObjectMapper objectMapper = new ObjectMapper();
-        String jsonBody = null;
-        try {
-            jsonBody = objectMapper.writeValueAsString(data);
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
+        String jsonBody = objectMapper.writeValueAsString(data);
 
-        RestAssured.baseURI ="https://jsonplaceholder.typicode.com/";
+        // This example uses the "posts" endpoint which supports POST requests
+        RestAssured.baseURI = "https://jsonplaceholder.typicode.com/";
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
                 .body(jsonBody)
-                .post();
+                .post("posts");  // Using the "posts" endpoint for creating posts
 
-        System.out.println(response.statusCode());
-        System.out.println(response.body().asString());
+        // Assert the successful response code (assuming success is 201)
+        assertEquals(201, response.statusCode());
 
+        System.out.println("Response: " + response.body().asString());
     }
 }
