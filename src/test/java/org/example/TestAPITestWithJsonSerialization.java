@@ -12,7 +12,7 @@ import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
-public class APITestCaseWithJsonSerialization {
+public class TestAPITestWithJsonSerialization {
 
     @Test
     public void testPostRequestWithSerialization() throws JsonProcessingException {
