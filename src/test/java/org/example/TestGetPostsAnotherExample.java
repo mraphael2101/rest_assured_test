@@ -34,7 +34,7 @@ public class TestGetPostsAnotherExample {
             assertThat(title, notNullValue());
          }
 
-        assertThat(titles.get(1), equalTo("sunt aut facere repellat provident occaecati excepturi optio reprehenderit"));
+        assertThat(titles.get(1), equalTo("qui est esse"));
 
     }
 
