@@ -43,8 +43,7 @@ public class TestAPIWithJsonSerialization {
             assertEquals("quia et suscipit\n" +
                             "suscipit recusandae consequuntur expedita et cum\n" +
                             "reprehenderit molestiae ut ut quas totam\n" +
-                            "nostrum rerum est autem sunt rem eveniet architecto",
-                    rBody);
+                            "nostrum rerum est autem sunt rem eveniet architecto", rBody);
         }
     }
 }
