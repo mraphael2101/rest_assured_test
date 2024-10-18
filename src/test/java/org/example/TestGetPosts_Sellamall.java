@@ -35,7 +35,6 @@ public class TestGetPosts_Sellamall {
          }
 
         assertThat(titles.get(1), equalTo("qui est esse"));
-
     }
 
 }
