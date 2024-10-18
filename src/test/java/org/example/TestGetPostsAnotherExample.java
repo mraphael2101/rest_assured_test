@@ -30,7 +30,7 @@ public class TestGetPostsAnotherExample {
         List<String> titles = response.jsonPath().getList("title");
 
         for (String title : titles) {
-            System.out.println(title);
+//            System.out.println(title);
             assertThat(title, notNullValue());
          }
 
