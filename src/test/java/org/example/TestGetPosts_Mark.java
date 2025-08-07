@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
-import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 /**
  * This is an exercise to assess your RestAssured skills.
@@ -17,7 +17,7 @@ import static junit.framework.Assert.assertEquals;
     - Verifies that the response status code.
     - Extracts the first post's title and body.
     - Asserts that the extracted title and body match expected values.
- * 2) If you complete this are there any improvements you can do to make the test more thorough
+ * 2) If you complete this, are there any improvements you can do to make the test more thorough?
  * */
 
 public class TestGetPosts_Mark {
